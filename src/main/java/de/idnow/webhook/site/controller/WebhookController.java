@@ -62,7 +62,7 @@ public class WebhookController {
 	}
 
 	@POST
-	@Path("/webhook/save/{token}/response/{status_code}")
+	@Path("/save/{token}/response/{status_code}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response saveAndReturnGivenStatus(@PathParam("token") String token,@PathParam("status_code") Integer statusCode, JsonObject body) {

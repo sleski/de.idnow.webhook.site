@@ -3,8 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <title>de.idnow.webhook.site - 1.0.0-SNAPSHOT</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+        </script>
     </head>
     <body>
-        <title>This is awesome page!</title>
+
+        <section>
+            <h1>This is awesome page!</h1>
+
+            <table id='table'>
+                <tr>
+                    <th>id</th>
+                    <th>hash</th>
+                    <th>creation time</th>
+                </tr>
+
+                <script type="text/javascript">
+                    var apiUrl = 'http://localhost:8080/webhook/all';
+                    fetch(apiUrl).then(response => {
+                        return response.json();
+                    }).then(data => {
+                        // Work with JSON data here
+
+
+                        var webhook = '';
+
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            webhook += '<tr>';
+                            webhook += '<td><a href="http://localhost:8080/webhook/id/'+value.id+'">' +
+                                    value.id + '</a></td>';
+
+                            webhook += '<td><a href="http://localhost:8080/webhook/hash/'+value.hash+'">' +
+                                    value.hash + '</td>';
+
+                            webhook += '<td>' +
+                                    value.creationTime + '</td>';
+
+                            webhook += '</tr>';
+                        });
+
+                        //INSERTING ROWS INTO TABLE
+                        $('#table').append(webhook);
+
+
+
+                    }).catch(err => {
+                        // Do something for an error here
+                    });
+
+                </script>
+            </table>
+        </section>
+
+
     </body>
 </html>
