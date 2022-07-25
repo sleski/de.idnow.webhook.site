@@ -10,6 +10,8 @@ You can run your application in dev mode that enables live coding using:
 ```
 And after please open: http://localhost:8080/
 
+<img src="imgs/index.png" alt="Employee data" title="Employee Data title">
+
 # Webhooks are stored in In-Memory DB (we delete after 7 days or when service will be restarted)
 
 # Tools:
