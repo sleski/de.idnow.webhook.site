@@ -10,7 +10,15 @@ You can run your application in dev mode that enables live coding using:
 ```
 And after please open: http://localhost:8080/
 
-<img src="imgs/index.png" alt="Employee data" title="Employee Data title">
+<img src="imgs/index.png" title="All webhooks">
+
+Click on token, to see all webhooks related to it:
+
+<img src="imgs/webhooks_by_token.png" title="All webhooks">
+
+Click on id, to see webhook for given id:
+
+<img src="imgs/webhook_by_id.png" title="All webhooks">
 
 # Webhooks are stored in In-Memory DB (we delete after 7 days or when service will be restarted)
 
