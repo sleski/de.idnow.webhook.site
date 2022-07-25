@@ -1,6 +1,6 @@
-# de.idnow.webhook.site Project
+# de.idnow.webhook.site 
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This is simple webhook.site, where we can send webhook and later check the payload.
 
 ## Running the application in dev mode
 
@@ -8,8 +8,7 @@ You can run your application in dev mode that enables live coding using:
 ```shell script
 ./mvnw compile quarkus:dev
 ```
-
-This is simple webhook.site, where we can send webhook and later check the payload.
+And after please open: http://localhost:8080/
 
 # Webhooks are stored in In-Memory DB (we delete after 7 days or when service will be restarted)
 
@@ -30,7 +29,7 @@ This is simple webhook.site, where we can send webhook and later check the paylo
 /webhook/save/{token}/response/{status_code}
 ```
 
-## here we can send and save webhooks
+## here we can see webhook for given id
 ```
 /webhook/id/{id}
 ```
